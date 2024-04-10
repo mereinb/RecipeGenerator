@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+   
+<div class="container" id="recipeContainer">
+    <h1>Submit your recipe!</h1>
+
+
+    <form action="/submit" method="POST">
+        <label>What's your name?
+        <input type="text" name="creator">
+        </label>
+
+        <label>What's the recipe name?
+        <input type="text" name="recipeName">
+        </label>
+
+        <label>Please list all preparation steps
+        <input type="text" name="preparationSteps">
+        </label><br>
+
+    <div id="ingredientsContainer">
+        <label>Ingredient:
+        <input type="text" name="ingredients[]">
+        </label>
+
+        <label>Quantity:
+        <input type="text" name="quantity[]">
+        </label>
+
+        <label>Ingredient:
+        <input type="text" name="ingredients[]">
+        </label>
+
+        <label>Quantity:
+        <input type="text" name="quantity[]">
+        </label>
+    </div>
+        
+        <!-- + button to add new form to add ingredients -->
+        <button class="btn" type="button" id="addIngredient">Add more ingredients</button>
+        <script>
+            document.getElementById("addIngredient").addEventListener("click", function() {
+                var ingredientsContainer = document.getElementById("ingredientsContainer");
+                var newIngredientInput = document.createElement("div");
+
+                newIngredientInput.innerHTML = 
+                
+            `<label>Ingredient:
+                <input type="text" name="ingredients[]">
+            </label>
+
+            <label>Quantity:
+                <input type="text" name="quantities[]">
+            </label>`;
+    
+            ingredientsContainer.appendChild(newIngredientInput);
+            })
+
+
+        </script>
+        
+        <br>
+        
+        <button class="btn" type="submit">Add recipe</button>
+    </form>
+
+
+</div>
+
+</body>
+
+<footer>
+    <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<%- include('partials/footer') %>
+
+</footer>
+</html>

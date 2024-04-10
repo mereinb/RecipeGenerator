@@ -1,0 +1,115 @@
+body {
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 50%;
+    height: 500px;
+    margin: 5% auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(56, 56, 55, 0.75);
+    padding-top: 10px;
+}
+
+/* TYPOGRAFIE */
+h1 {
+    text-align: center;
+    padding-top:0;
+    margin-top:0;
+    font-family: "Playfair Display", serif;
+}
+
+h3 {
+    margin-bottom: 0;
+    font-family: "DM Serif Display", serif;
+    font-style: normal;
+}
+
+.firsth3 {
+    color:#ec84a4;
+}
+
+#creator {
+    text-align: center;
+
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.col-xs-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content:flex-start;
+}
+
+.recipePreparation {
+    padding-right: 35px;
+    padding-left: 20px;
+
+}
+
+#preparationh3 {
+    padding-right: 60px;
+}
+
+.btn {
+    font-family: "DM Serif Display", serif;;
+}
+
+.custom-btn-1 {
+    padding: 20px, 20px;
+    font-size: 2rem;
+    font-style: normal;
+    color:rgb(255, 255, 255);
+    background-color: #ec4464;
+    padding-top: 15px;
+    padding-bottom: 15px;
+   
+}
+
+.custom-btn-2 {
+    padding: 20px, 20px;
+    font-size: 2rem;
+    font-style: normal;
+    color:#ec4464;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ec4464;
+    background-color: rgb(255, 255, 255);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+
+   
+}
+
+
+.buttons-main {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.btn {
+    margin-right: 10px;
+}
+
+
+
