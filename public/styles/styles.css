@@ -37,8 +37,9 @@ h3 {
     color:#ec84a4;
 }
 
-#creator {
+.creator {
     text-align: center;
+    color:black;
 
 }
 
@@ -69,8 +70,10 @@ ul {
     padding-right: 60px;
 }
 
+/* BUTTONS */
 .btn {
-    font-family: "DM Serif Display", serif;;
+    font-family: "DM Serif Display", serif;
+    margin-right: 10px;
 }
 
 .custom-btn-1 {
@@ -95,11 +98,8 @@ ul {
     background-color: rgb(255, 255, 255);
     padding-top: 15px;
     padding-bottom: 15px;
-    
-
    
 }
-
 
 .buttons-main {
     display: flex;
@@ -107,9 +107,47 @@ ul {
 
 }
 
-.btn {
-    margin-right: 10px;
+.buttons-submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom:0;
+    margin-top: 10px;
+    align-items: center;
+
 }
+
+.custom-btn-submit-1 {
+    padding: 20px, 20px;
+    font-size: 1.5rem;
+    font-style: normal;
+    color:#ec4464;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ec4464;
+    background-color: rgb(255, 255, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    
+
+}
+
+.custom-btn-submit-2 {
+    padding: 20px, 20px;
+    font-size: 2rem;
+    font-style: normal;
+    color:rgb(255, 255, 255);
+    background-color: #ec4464;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width:100%;
+    margin-top: 10px;
+    
+    
+}
+
+
 
 
 

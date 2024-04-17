@@ -8,3 +8,4 @@ node_modules/
 jspm_packages/
 .npm
 .env
+.DS_Store

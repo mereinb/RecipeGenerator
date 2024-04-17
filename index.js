@@ -1,20 +1,23 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
+import env from "dotenv";
 
 
 const app = express ();
 const port = 3000;
+env.config();
 
 
 //Database connection 
 const db = new pg.Client({
-    user:"postgres",
-    host:"localhost",
-    database:"recipes",
-    password:"!Citroenschil1",
-    port: 5432
+    user: process.env.PG_USER,
+  host: process.env.PG_HOST,
+  database: process.env.PG_DATABASE,
+  password: process.env.PG_PASSWORD,
+  port: process.env.PG_PORT,
 });
+
 db.connect();
 
 //Middleware
@@ -67,8 +70,6 @@ app.post("/submit", async (req, res) => {
         "INSERT INTO recipes (recipe_name, creator, preparation_steps) VALUES ($1, $2, $3) RETURNING id",
         [recipeName, name, preparationSteps]
     );
-
-//TO REVIEW THE PART BELOW
 
     //extract recipe id
     const recipeId = recipeResult.rows[0].id;
